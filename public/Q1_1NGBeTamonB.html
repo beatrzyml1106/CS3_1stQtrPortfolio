@@ -1,4 +1,37 @@
-<script src="script.js">
+<body>
 
-
-</script>
+    <form action="/action_page.php">
+      
+      <label for="age">How old are you?: </label>
+      <input type="text=" id="age" name="age" v>
+      <label for="maxAge">How old do you want to last? : </label>
+      <input type="text" id="1name" name="1name"><br><br>
+      <label for="numPerDay">How many do you eat per day? :</label>
+      <input type="text" id="1name" name="1name"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    
+    
+    
+    <script>
+    
+    //let age = window.prompt("Age?", "13");
+    //let maxAge =window.prompt("Max age?", "100")
+    //let numPerDay = window.prompt("How many cups of coffe per day?");
+    
+    let totalRequired;
+    
+    
+    
+    //if(confirm(`Is your input correct?`)) {
+        totalRequired = (numPerDay * 365) * (maxAge - age);
+    
+    document.write("You will need " + totalRequired + " cups of coffee to last you until the age of " + maxAge)
+    }
+    //else{
+    console.log("Run the code again")
+    }
+    
+    
+    </script>
+    </body>
