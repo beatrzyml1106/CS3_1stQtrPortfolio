@@ -1,37 +1,44 @@
+<html>
 <body>
 
-    <form action="/action_page.php">
-      
-      <label for="age">How old are you?: </label>
-      <input type="text=" id="age" name="age" v>
-      <label for="maxAge">How old do you want to last? : </label>
-      <input type="text" id="1name" name="1name"><br><br>
-      <label for="numPerDay">How many do you eat per day? :</label>
-      <input type="text" id="1name" name="1name"><br><br>
-      <input type="submit" value="Submit">
-    </form>
-    
-    
-    
-    <script>
-    
-    //let age = window.prompt("Age?", "13");
-    //let maxAge =window.prompt("Max age?", "100")
-    //let numPerDay = window.prompt("How many cups of coffe per day?");
-    
-    let totalRequired;
-    
-    
-    
-    //if(confirm(`Is your input correct?`)) {
-        totalRequired = (numPerDay * 365) * (maxAge - age);
-    
-    document.write("You will need " + totalRequired + " cups of coffee to last you until the age of " + maxAge)
+    <h1> Feed Me My Snacks </h1>
+
+      <label> Enter your age : 
+        <input id="age" />
+      </label>
+      </br>
+
+      <label> How old do you want to last : 
+        <input id="maxAge" />
+      </label>
+      </br>
+
+      <label> How many snacks : 
+        <input id="numPerDay" />
+      </label>
+      </br>
+
+      <p> Result : <span id="result"></span>
+      </p>
+
+      <button onclick="getData()"> Accept Input </button>
+      <script>
+        function getData(){
+          let AGE = age.value;
+          let maxAGE = maxAge.value;
+          let perDay = numPerDay.value;
+          let sure = window.confirm("Are you sure of your numbers?")
+
+         
+    if(sure) {
+        let totalRequired = (Number(perDay) * 365) * (Number(maxAGE) - Number(AGE));
+        result.innerHTML = " You will need " + totalRequired + " cups of coffee to last you until the age of " + maxAGE
     }
-    //else{
-    console.log("Run the code again")
+    else{
+    widow.alert("Run the code again")
     }
-    
-    
-    </script>
+        }
+      </script>
+
     </body>
+    </html>
